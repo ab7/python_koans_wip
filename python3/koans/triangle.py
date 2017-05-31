@@ -20,6 +20,9 @@
 
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
+    if (((a + b) < c) or ((b + c) < a) or ((c + a) < b)) or (a + b + c) <= 0:
+        raise TriangleError()
+
     if a == b and b == c and c == a:
         return 'equilateral'
     elif (a == b and b != c) or (b == c and c != a) or (c == a and a != b):
